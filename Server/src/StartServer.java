@@ -18,11 +18,11 @@ public class StartServer {
             rootpoa.the_POAManager().activate();
 
             // create servant and register it with the ORB
-            UserServiceObj addobj = new UserServiceObj();
-            addobj.setORB(orb);
+            UserServiceObj userServiceObj = new UserServiceObj();
+            userServiceObj.setORB(orb);
 
             // get object reference from the servant
-            org.omg.CORBA.Object ref = rootpoa.servant_to_reference(addobj);
+            org.omg.CORBA.Object ref = rootpoa.servant_to_reference(userServiceObj);
             UserService href = UserServiceHelper.narrow(ref);
 
             org.omg.CORBA.Object objRef =  orb.resolve_initial_references("NameService");
