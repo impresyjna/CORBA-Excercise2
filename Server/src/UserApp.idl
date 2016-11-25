@@ -13,7 +13,7 @@ module interfaces {
     interface UserService {
     		User createUser(in User user);
     		string deleteUser(in long userId);
-    		User getUser();
+    		User getUser(in long userId);
     		User updateUser(in User user);
     		Users getUsers();
     };
