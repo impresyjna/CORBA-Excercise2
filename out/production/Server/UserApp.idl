@@ -1,0 +1,20 @@
+module interfaces {
+    struct User {
+    		string login;
+    		string name;
+    		string surname;
+    		long age;
+    		boolean isAdmin;
+    		long id;
+    };
+
+    typedef sequence<User> Users;
+
+    interface UserService {
+    		User createUser(in User user);
+    		string deleteUser(in long userId);
+    		User getUser(in long userId);
+    		User updateUser(in User user);
+    		Users getUsers();
+    };
+};
