@@ -15,4 +15,4 @@ module interfaces {
     		void getUser(in User user);
     		void updateUser(in User user);
     };
-}
+};
