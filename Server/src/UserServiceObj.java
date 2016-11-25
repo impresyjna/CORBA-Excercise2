@@ -57,6 +57,10 @@ public class UserServiceObj extends UserServicePOA{
 
     @Override
     public User[] getUsers() {
-        return (User[]) users.toArray();
+        User[] returnedUsers = new User[users.size()];
+        for(int i=0; i<users.size(); i++){
+            returnedUsers[i] = users.get(i);
+        }
+        return returnedUsers;
     }
 }
